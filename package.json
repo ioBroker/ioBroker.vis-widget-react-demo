@@ -2,28 +2,45 @@
     "name": "iobroker.vis-widget-react-demo",
     "private": true,
     "version": "1.13.0",
-    "scripts": {
-        "vite-dev": "vite",
-        "vite-build": "vite build",
-        "vite-preview": "vite preview"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "react-ace": "^10.1.0",
-        "ace-builds": "^1.5.3",
-        "@iobroker/adapter-react-v5": "^3.0.15",
-        "@mui/material": "^5.8.1",
-        "@mui/styles": "^5.8.0",
+    "dependencies": {
+        "@iobroker/adapter-react-v5": "^3.0.16",
+        "@mui/material": "^5.7.0",
+        "@mui/styles": "^5.7.0",
+        "eslint-plugin-eqeqeq-fix": "^1.0.3",
+        "eslint-plugin-only-warn": "^1.0.3",
         "prop-types": "^15.8.1",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
-        "@originjs/vite-plugin-federation": "^1.1.6",
-        "@rollup/plugin-babel": "^5.3.1",
-        "@rollup/plugin-commonjs": "^22.0.0",
-        "@rollup/plugin-node-resolve": "^13.3.0",
-        "@rollup/plugin-replace": "^4.0.0",
-        "@types/react": "^18.0.9",
-        "@types/react-dom": "^18.0.5",
-        "vite": "^2.9.9"
-    }
+        "react-scripts": "^5.0.1"
+    },
+    "scripts": {
+        "start": "set PORT=4173 && craco start",
+        "old-start": "set PORT=4173 && react-scripts start",
+        "lint": "eslint --fix --ext .js,.jsx src",
+        "build": "craco build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "devDependencies": {
+        "@craco/craco": "^6.4.3",
+        "craco-esbuild": "^0.5.1",
+        "craco-module-federation": "^1.1.0",
+        "eslint": "^8.17.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-react": "^7.30.0",
+        "eslint-plugin-react-hooks": "^4.5.0",
+        "sass": "^1.52.1"
+    },
+    "homepage": ".",
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }

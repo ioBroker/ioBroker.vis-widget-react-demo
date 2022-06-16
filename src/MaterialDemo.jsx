@@ -16,11 +16,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import VisRxWidget from './visRxWidget';
 import { Button } from '@mui/material';
+import VisRxWidget from './visRxWidget';
 
-class MaterialDemo extends VisRxWidget {
-
+class MaterialDemo extends (window.visRxWidget || VisRxWidget) {
     static getWidgetInfo() {
         return {
             id: 'tplMaterialDemo',
@@ -44,18 +43,18 @@ class MaterialDemo extends VisRxWidget {
         // }
 
         return <div>
-            <Button variant="contained" style={{width: this.state.style?.width, height: this.state.style?.height}}>
+            <Button variant="contained" style={{ width: this.state.style?.width, height: this.state.style?.height }}>
                 {this.state.data?.button_name}
             </Button>
         </div>;
-        /*return <SmartTile
+        /* return <SmartTile
             editMode={false}
             socket={this.props.socket}
             systemConfig={this.state.systemConfig}
             themeType="dark"
             doNavigate={() =>
                 console.log('Navigate')}
-        />;*/
+        />; */
     }
 }
 
