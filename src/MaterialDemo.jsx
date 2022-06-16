@@ -25,7 +25,15 @@ class MaterialDemo extends (window.visRxWidget || VisRxWidget) {
             id: 'tplMaterialDemo',
             visSet: 'material-widgets',
             visName: 'Demo',
-            visAttrs: 'button_name',
+            visAttrs: [{
+                name: 'common',
+                fields: [
+                    {
+                        name: 'name',
+                    },
+                ],
+            },
+            ],
             visPrev: 'widgets/material-widgets/img/prev_switch.png',
         };
     }
